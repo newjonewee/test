@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @derp.title %>
+</p>
+
+<p>
+  <strong>Derp:</strong>
+  <%= @derp.derp %>
+</p>
+
+<%= link_to 'Edit', edit_derp_path(@derp) %> |
+<%= link_to 'Back', derps_path %>

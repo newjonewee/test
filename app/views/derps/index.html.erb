@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Derps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Derp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @derps.each do |derp| %>
+      <tr>
+        <td><%= derp.title %></td>
+        <td><%= derp.derp %></td>
+        <td><%= link_to 'Show', derp %></td>
+        <td><%= link_to 'Edit', edit_derp_path(derp) %></td>
+        <td><%= link_to 'Destroy', derp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Derp', new_derp_path %>
